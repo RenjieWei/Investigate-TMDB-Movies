@@ -7,3 +7,4 @@ What can we say about the success of a movie before it is released? Are there ce
 ## Data Source
 https://www.kaggle.com/tmdb/tmdb-movie-metadata
 
+### Detailed methodology and code implementation is in the Project Report.pdf
