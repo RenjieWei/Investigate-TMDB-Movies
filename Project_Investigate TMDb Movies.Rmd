@@ -5,8 +5,8 @@ date: "9/30/2017"
 output: pdf_document
 ---
 
-##Data Preparation
-#####Before going through the details of those two prediction problems, I first prepare and clean the data as follows.
+## Data Preparation
+##### Before going through the details of those two prediction problems, I first prepare and clean the data as follows.
 ```{r}
 # Download the tmdb movie dataset from Kaggle.
 setwd("~/Desktop/2018Fall/STAT542/HW5") 
