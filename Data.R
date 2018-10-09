@@ -1,11 +1,12 @@
 ## Data Preparation
 
-##### Before going through the details of those two prediction problems, I first prepare and clean the data as follows.
-```{r}
-# Download the tmdb movie dataset from Kaggle.
+##### Before going through the details of those two prediction problems, firstly prepare and clean the data as follows.
+
+###### Download the tmdb movie dataset from Kaggle.
 setwd("~/Desktop/Dataset") 
 raw = read.csv("tmdb_5000_movies.csv",stringsAsFactors = F)
-### Data Clean
+
+###### Data Clean
 # 1. Remove instances which have at least one NA variable
 movies = raw
 movies = movies[complete.cases(movies), ]
