@@ -1,13 +1,13 @@
 ## Data Preparation
 
-##### Before going through the details of those two prediction problems, firstly prepare and clean the data as follows.
+## Before going through the details of those two prediction problems, firstly prepare and clean the data as follows.
 
-###### Download the tmdb movie dataset from Kaggle.
+## Download the tmdb movie dataset from Kaggle.
 setwd("~/Desktop/Dataset") 
 raw = read.csv("tmdb_5000_movies.csv",stringsAsFactors = F)
-
-###### Data Clean
-# 1. Remove instances which have at least one NA variable
+```{r}
+## Data Clean
+# Remove instances which have at least one NA variable
 movies = raw
 movies = movies[complete.cases(movies), ]
 # 2. Remove instances which are duplicated (duplicated based on title)
@@ -21,6 +21,7 @@ for( i in 1:dim(movies)[1]){
   if(is.na(genresID[[i]][2])){movies$genresID2[i] = 0}else{movies$genresID2[i] = genresID[[i]][2]}
   if(is.na(genresID[[i]][3])){movies$genresID3[i] = 0}else{movies$genresID3[i] = genresID[[i]][3]}
 }
+```
 movies$keywordsID = str_extract(movies$keywords, "[0-9]+[0-9]") #extract first keyword 
 movies$companyID = str_extract(movies$production_companies, "[0-9]+[0-9]") #extract produce company 
 movies$countryABB = substr(movies$production_countries,18,19) #extarct produce country
